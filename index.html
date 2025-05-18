@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Login</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <div class="welcome">
+   <h4>Welcome to the</h4>
+   <h1>QUIZ</h1>
+   <h5 class="please">Please <span>Sign In</span> to participate in QUIZ </h5>
+ </div>
+ 
+  <div class="container">
+    <div id="signInForm">
+      <h2>Sign In</h2>
+      <input type="text" id="signinUsername" placeholder="Name or Email" required />
+      <input type="password" id="signinPassword" placeholder="Password" required />
+      <button onclick="handleSignIn()">Sign In</button>
+      <div class="switch" onclick="showForm('signUp')">New user? Register</div>
+    </div>
+
+    <div id="signUpForm" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required />
+      <input type="text" id="signupEmail" placeholder="Enter Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
+      <input type="date" id="signupDOB" placeholder="Date of Birth" required />
+      <select id="signupQualification">
+        <option value="">Select Qualification</option>
+        <option value="High School">High School</option>
+        <option value="Bachelor's">Bachelor's</option>
+        <option value="Master's">Master's</option>
+        <option value="PhD">PhD</option>
+      </select>
+      <button onclick="handleSignUp()">Sign Up</button>
+      <div class="switch" onclick="showForm('signIn')">Already registered? Sign In</div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+

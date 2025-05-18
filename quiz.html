@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./quiz.css">
+   
+</head>
+<body>  
+    <h1>QUIZ</h1>
+    <div class="menu active">
+      <button onclick="startQuiz('education')">Educational Quiz</button>
+      <button onclick="startQuiz('sports')">Sports Quiz</button>
+      <button onclick="startQuiz('political')">Political Quiz</button>
+      <button onclick="showCreateQuiz()">Create Your Own Quiz</button>
+    </div>
+  
+    <div class="quiz">
+      <div class="question" id="questionText"></div>
+      <div id="options"></div>
+      <button class="next-btn" onclick="nextQuestion()">Next</button>
+       
+    </div>
+    
+  
+    <div class="result">
+      <h2>Result</h2>
+      <p id="score"></p>
+      <button onclick="goHome()">Back to Home</button> 
+    </div>
+  
+    <div class="create-quiz">
+      <h2>Create Your Quiz</h2>
+      <input type="text" id="customQuestion" placeholder="Enter question" />
+      <input type="text" id="customOption1" placeholder="Option 1" />
+      <input type="text" id="customOption2" placeholder="Option 2" />
+      <input type="text" id="customOption3" placeholder="Option 3" />
+      <input type="text" id="customOption4" placeholder="Option 4" />
+      <input type="number" id="customAnswer" placeholder="Correct Option (1-4)" />
+      <button onclick="addCustomQuestion()">Add Question</button>
+      <button onclick="finishCustomQuiz()">Start Custom Quiz</button>
+      <button onclick="goHome()">Back to Home</button>
+    </div>
+  
+    <div class="custom-quiz-view">
+      <h2>Your Custom Quiz</h2>
+      <button onclick="startQuiz('custom')">Start Custom Quiz</button>
+      <button onclick="goHome()">Back to Home</button>
+    </div>
+
+  
+    <script src="./quiz.js"></script>
+</body>
+</html>
